@@ -1,0 +1,43 @@
+.projects__grid {
+  display: grid;
+  gap: var(--space-6);
+}
+
+.projects__item > .card {
+  height: 100%;
+}
+
+.projects__more {
+  margin-top: var(--space-8);
+}
+
+/* Every card is one column wide, so all images are the same size.
+   With an odd number of cards, the last one is centred. */
+@media (min-width: 40rem) {
+  .projects__grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .projects__item:last-child:nth-child(odd) {
+    grid-column: 1 / -1;
+    justify-self: center;
+    width: calc(50% - var(--space-3));
+  }
+}
+
+/* Three cards per row. Six tracks let a final row of two sit in the centre. */
+@media (min-width: 64rem) {
+  .projects__grid {
+    grid-template-columns: repeat(6, minmax(0, 1fr));
+  }
+
+  .projects__item,
+  .projects__item:last-child:nth-child(odd) {
+    grid-column: span 2;
+    width: auto;
+  }
+
+  .projects__item:nth-child(3n + 1):nth-last-child(2) {
+    grid-column: 2 / span 2;
+  }
+}

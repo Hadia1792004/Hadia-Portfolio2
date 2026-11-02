@@ -1,0 +1,15 @@
+.education__card {
+  display: flex;
+  align-items: flex-start;
+  gap: var(--space-4);
+}
+
+.education__degree {
+  margin-bottom: var(--space-1);
+  font-size: var(--text-lg);
+  line-height: 1.25;
+}
+
+.education__university {
+  color: var(--color-muted);
+}

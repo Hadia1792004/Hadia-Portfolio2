@@ -1,0 +1,61 @@
+.button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-2);
+  min-height: 2.75rem;
+  padding: var(--space-2) var(--space-5);
+  border: 1px solid transparent;
+  border-radius: var(--radius-sm);
+  font: inherit;
+  font-size: var(--text-sm);
+  font-weight: 500;
+  text-decoration: none;
+  cursor: pointer;
+  transition:
+    background-color var(--duration-fast) ease,
+    border-color var(--duration-fast) ease,
+    box-shadow var(--duration-fast) ease,
+    transform var(--duration-fast) ease;
+}
+
+.button:active {
+  transform: translateY(1px);
+}
+
+@media (max-width: 30rem) {
+  .button {
+    padding-inline: var(--space-4);
+  }
+}
+
+.button--primary {
+  background: var(--color-accent);
+  color: var(--color-on-accent);
+}
+
+.button--secondary {
+  background: var(--color-surface);
+  border-color: var(--color-border);
+  color: var(--color-text);
+}
+
+@media (hover: hover) {
+  .button:hover {
+    box-shadow: var(--shadow-card-hover);
+    transform: translateY(-1px);
+  }
+
+  .button:active {
+    transform: translateY(1px);
+  }
+
+  /* Mixing with the text colour darkens it in light mode and lightens it in dark mode. */
+  .button--primary:hover {
+    background: color-mix(in srgb, var(--color-accent) 88%, var(--color-text));
+  }
+
+  .button--secondary:hover {
+    border-color: var(--color-muted);
+  }
+}

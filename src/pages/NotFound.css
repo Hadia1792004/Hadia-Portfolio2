@@ -1,0 +1,15 @@
+.not-found {
+  padding-block: var(--space-section);
+}
+
+.not-found__code {
+  margin-bottom: var(--space-4);
+  color: var(--color-accent);
+  font-family: var(--font-mono);
+  font-size: var(--text-xs);
+}
+
+.not-found__title {
+  margin-bottom: var(--space-8);
+  font-size: var(--text-xl);
+}

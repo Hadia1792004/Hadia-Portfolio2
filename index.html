@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Portfolio of Hadia Hassan, a BS Computer Engineering Technology student at International Islamic University Islamabad and aspiring full stack web developer."
+    />
+    <meta
+      name="theme-color"
+      media="(prefers-color-scheme: light)"
+      content="#fafaf7"
+    />
+    <meta
+      name="theme-color"
+      media="(prefers-color-scheme: dark)"
+      content="#0e1113"
+    />
+    <title>Hadia Hassan | Aspiring Full Stack Web Developer</title>
+    <script>
+      // Applies a saved theme before first paint so the page never flashes the wrong one.
+      try {
+        const theme = localStorage.getItem('theme')
+        if (theme) document.documentElement.dataset.theme = theme
+      } catch {
+        // Storage can be blocked; the page then follows the device setting.
+      }
+    </script>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.jsx"></script>
+  </body>
+</html>

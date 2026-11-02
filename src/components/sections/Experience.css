@@ -1,0 +1,6 @@
+.experience__intro {
+  max-width: var(--width-text);
+  margin-top: calc(-1 * var(--space-5));
+  margin-bottom: var(--space-8);
+  color: var(--color-muted);
+}

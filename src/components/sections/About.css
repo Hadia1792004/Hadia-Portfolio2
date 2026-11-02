@@ -1,0 +1,49 @@
+.about__layout {
+  display: grid;
+  gap: var(--space-8);
+}
+
+.about__lead {
+  max-width: var(--width-text);
+  font-size: var(--text-lg);
+  line-height: 1.5;
+}
+
+.about__subheading {
+  margin-top: var(--space-8);
+  margin-bottom: var(--space-4);
+  font-size: var(--text-base);
+}
+
+.about__highlights {
+  display: grid;
+  gap: var(--space-6);
+}
+
+.about__highlight > .card {
+  height: 100%;
+}
+
+@media (min-width: 40rem) {
+  .about__highlights {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  /* Five cards: the first spans the full width so the grid ends evenly. */
+  .about__highlight:first-child {
+    grid-column: 1 / -1;
+  }
+}
+
+@media (min-width: 64rem) {
+  .about__layout {
+    grid-template-columns: minmax(0, 2fr) minmax(0, 3fr);
+    gap: var(--space-12);
+    align-items: start;
+  }
+
+  .about__summary {
+    position: sticky;
+    top: calc(var(--header-height) + var(--space-6));
+  }
+}

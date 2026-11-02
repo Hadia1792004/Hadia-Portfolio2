@@ -1,0 +1,50 @@
+.skill-card__header {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+  margin-bottom: var(--space-4);
+}
+
+.skill-card__title {
+  font-size: var(--text-lg);
+}
+
+.skill-card__list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(6.5rem, 1fr));
+  gap: var(--space-3);
+}
+
+/* On desktop each card fits all its skills on one row, leaving no gaps. */
+@media (min-width: 64rem) {
+  .skill-card__list {
+    grid-template-columns: repeat(var(--count), minmax(0, 1fr));
+  }
+}
+
+.skill-card__item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--space-2);
+  padding: var(--space-4) var(--space-2);
+  background: var(--color-bg);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-sm);
+  text-align: center;
+}
+
+/* Mixing with the text colour keeps every brand colour legible in both themes. */
+.skill-card__logo {
+  color: color-mix(
+    in srgb,
+    var(--brand-color, var(--color-text)) 80%,
+    var(--color-text)
+  );
+}
+
+.skill-card__name {
+  font-size: var(--text-sm);
+  font-weight: 500;
+  line-height: 1.3;
+}
